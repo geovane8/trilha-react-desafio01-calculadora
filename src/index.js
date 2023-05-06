@@ -1,14 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import App from './App';
 
-import GlobalStyles from './global';
+// Remova a importação de GlobalStyles daqui
 
+// Adicione comentários explicativos
+const rootElement = document.getElementById('root');
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+// Use ReactDOM.render em vez de ReactDOM.createRoot
+ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyles />
+    {/* Movido a importação de GlobalStyles para dentro do componente App */}
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  rootElement
 );
