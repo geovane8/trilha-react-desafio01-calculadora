@@ -4,6 +4,7 @@ import Button from './components/Button';
 import { Container, Content, Row } from './styles';
 import { useState } from 'react';
 
+// 1ºcodigo alternativo
 
 const App = () => {
   const [currentNumber, setCurrentNumber] = useState('0');
@@ -115,7 +116,48 @@ const App = () => {
     }
 
   }
+//codigo  alternativo
+  /*const handleAddNumber = (num) => {
+  setCurrentNumber((prev) => `${prev === '0' ? '' : prev}${num}`);
+};
 
+const handleMultiplyNumbers = () => {
+  if (firstNumber === '0') {
+    setFirstNumber(String(currentNumber));
+    setCurrentNumber('0');
+    setOperation('x');
+  } else {
+    const product = Number(firstNumber) * Number(currentNumber);
+    setCurrentNumber(String(product));
+    setOperation('');
+  }
+};
+
+const handleDivideNumbers = () => {
+  if (firstNumber === '0') {
+    setFirstNumber(String(currentNumber));
+    setCurrentNumber('0');
+    setOperation('/');
+  } else {
+    const quotient = Number(firstNumber) / Number(currentNumber);
+    setCurrentNumber(String(quotient));
+    setOperation('');
+  }
+};
+
+const handlePercentage = () => {
+  if (firstNumber === '0') {
+    setFirstNumber(String(currentNumber));
+    setCurrentNumber('0');
+    setOperation('%');
+  } else {
+    const percentage = (Number(firstNumber) / 100) * Number(currentNumber);
+    setCurrentNumber(String(percentage));
+    setOperation('');
+  }
+};
+*/
+  
   return (
     <Container>
       <Content>
