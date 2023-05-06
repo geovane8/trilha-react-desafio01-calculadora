@@ -15,3 +15,32 @@ const Button = ({ label, onClick }) => {
 };
 
 export default Button;
+
+// codigo alternativo
+
+/*
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Button = ({ label, onClick }) => {
+  const handleClick = () => {
+    if (onClick) {
+      onClick(label);
+    }
+  };
+
+  return (
+    <button onClick={handleClick}>
+      {label}
+    </button>
+  );
+};
+
+Button.propTypes = {
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+};
+
+export default Button;
+*/
+
